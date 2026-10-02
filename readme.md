@@ -10,7 +10,7 @@ lien github : https://github.com/Juuuules83/tp-kaplas.git
 ### Question : et si la pile était déjà rangée, quelle serait la complexité ?
 
 voici le résultat du benchmark 
--> ![Image du benchmark](image.png)
+-> ![alt text](image.png)
 
 nous sommes à un nombre d'opération de : O(n)
 en raison du fait que c'est un slice que l'on parcours, 
