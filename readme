@@ -15,3 +15,26 @@ en raison du fait que c'est un slice que l'on parcours,
 la complexité est de niveau O(n)
 
 Nous ne pouvons pas la réduire à O(1) dit "constant", car le slice doit parcourir "n" nombre en fonction du nombre d'éléments présent dans le slice.
+
+--------------------------------------
+
+## PB02 - Le Kapla en double :
+
+A remplir !!!
+
+
+--------------------------------------
+
+## PB03 - La hauteur de la tour : 
+
+Voici le resultat du Benchamrk  O(n)
+-> ![alt text](image-1.png)
+
+voici le resultat du Benchamrk o(1)
+
+->![alt text](image-2.png)
+
+Pour le Benchmark O(n) on constate que le temps d'excution augmente  augmente de manière proportionnelle à la valeur de "n" , cela passe d'environ 
+254.4 ns/op pour 1000 éléments à plus de 24959 ns/op pour 100 000 éléments 
+
+pour le BanchMark O(1) on constate que le temps d'excution reste constant de 0.5138 ns/op peu importe que n soit petit ou grand  
