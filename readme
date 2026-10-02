@@ -1,0 +1,17 @@
+# TP - Complexité algorithmique en GO
+-------------------------------------
+
+lien github : https://github.com/Juuuules83/tp-kaplas.git
+
+-------------------------------------
+
+## PB01 - Le plus petit kapla :
+
+voici le résultat du benchmark 
+-> ![Image du benchmark](image.png)
+
+nous sommes à un nombre d'opération de : O(n)
+en raison du fait que c'est un slice que l'on parcours, 
+la complexité est de niveau O(n)
+
+Nous ne pouvons pas la réduire à O(1) dit "constant", car le slice doit parcourir "n" nombre en fonction du nombre d'éléments présent dans le slice.
