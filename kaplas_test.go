@@ -16,3 +16,14 @@ func BenchmarkSmallest(b *testing.B) {
 		})
 	}
 }
+func BenchmarkDuplicate(b *testing.B) {
+	for _, n := range []int {1_000, 10_000, 100_000} {
+		pile := WithDuplicate(n, 3) // préparation hors de la mesure
+		b.Run(fmt.Sprintf("V1/n=%d", n), func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+						sink = DuplicateV1(pile)
+					}
+				
+				})
+	}
+}
