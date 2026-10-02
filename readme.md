@@ -32,8 +32,10 @@ voici le résultat du benchmark V1<br>
 voici le résultat du benchmark V2<br>
 -> ![alt text](image-4.png)<br>
 
-Pour la version V1 O(n), on constate que la mémoire utilisée augmente proportionnellement à la valeur de "n", cela passe d'environ 74 264 B/op pour 1000 éléments à plus de 4 729 583 B/op pour 100 000 éléments.<br>
-Pour la version V2 O(1) , on constate que la mémoire utilisée reste constante à 0 B/op peu importe que n soit petit ou grand.<br>
+ - Pour la version V1 O(n), on constate que la mémoire utilisée augmente proportionnellement à la valeur de "n", <br>
+cela passe d'environ 74 264 B/op pour 1000 éléments à plus de 4 729 583 B/op pour 100 000 éléments.<br>
+
+ - Pour la version V2 O(1) , on constate que la mémoire utilisée reste constante à 0 B/op peu importe que n soit petit ou grand.<br>
 
 **Commande pour lancer le bench V1 :** _go test -bench=DuplicateV1 -benchmem -run='^$'_ <br>
 **Commande pour lancer le bench V2 :** _go test -bench=DuplicateV2 -benchmem -run='^$'_<br>
@@ -49,10 +51,10 @@ Voici le resultat du Benchamrk V1<br>
 voici le résultat du benchmark V2<br>
 -> ![alt text](image-2.png)<br>
 
-Pour le Benchmark O(n) on constate que le temps d'excution augmente  augmente de manière proportionnelle à la valeur de "n" , cela passe d'environ <br>
-254.4 ns/op pour 1000 éléments à plus de 24959 ns/op pour 100 000 éléments  <br>
+ - Pour la version V1 O(n), on constate que le temps d'excution augmente  augmente de manière proportionnelle à la valeur de "n", <br>
+cela passe d'environ 254.4 ns/op pour 1000 éléments à plus de 24959 ns/op pour 100 000 éléments  <br>
 
-pour le BanchMark O(1) on constate que le temps d'excution reste constant de 0.5138 ns/op peu importe que n soit petit ou grand   <br>
+- pour le version V2 O(1), on constate que le temps d'excution reste constant de 0.5138 ns/op peu importe que n soit petit ou grand   <br>
 
 **Commande pour lancer le bench :** _go test -bench=TowerHeightV1 -benchmem -run='^$'_ <br>
 **Commande pour lancer le bench V1 :** _go test -bench=TowerHeightV2 -benchmem -run='^$'_ <br>
