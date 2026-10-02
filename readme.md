@@ -7,7 +7,7 @@ lien github : https://github.com/Juuuules83/tp-kaplas.git
 
 ## PB01 - Le plus petit kapla :
 
-## Question : et si la pile était déjà rangée, quelle serait la complexité ?
+### Question : et si la pile était déjà rangée, quelle serait la complexité ?
 
 voici le résultat du benchmark 
 -> ![Image du benchmark](image.png)
@@ -22,7 +22,7 @@ Nous ne pouvons pas la réduire à O(1) dit "constant", car le slice doit parcou
 
 ## PB02 - Le Kapla en double :
 
-##  Question : si la pile contenait des numéros quelconques, laquelle de vos  versions fonctionnerait encore ? 
+###  Question : si la pile contenait des numéros quelconques, laquelle de vos  versions fonctionnerait encore ? 
 
 Voici le résulta du Banchmark v1 
 
@@ -40,7 +40,7 @@ Pour la version V2 O(1) , on constate que la mémoire utilisée reste constante 
 
 ## PB03 - La hauteur de la tour : 
 
-## Question : retrouvez-vous l'écart mesuré pendant la capsule ? Sinon, cherchez  pourquoi.
+### Question : retrouvez-vous l'écart mesuré pendant la capsule ? Sinon, cherchez  pourquoi.
 Voici le resultat du Benchamrk  O(n)
 -> ![alt text](image-1.png)
 
