@@ -18,7 +18,7 @@ la complexité est de niveau O(n)<br>
 
 Nous ne pouvons pas la réduire à O(1) dit "constant", car le slice doit parcourir "n" nombre en fonction du nombre d'éléments présent dans le slice.<br>
 
-**Commande pour lancer le bench :** _go test -bench=Smallest -benchmem -run='^$'_<br>
+**Commande pour lancer le bench :** _go test -bench=SmallestV1 -benchmem -run='^$'_<br>
 
 --------------------------------------<br>
 
