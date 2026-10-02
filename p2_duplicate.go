@@ -9,3 +9,16 @@ for _, nom := range pile {
 	}
 return len(mapbool)
 }
+
+func DuplicateV2(pile []int) int {
+	n := len(pile) - 1 
+
+	sommeT := (n * (n + 1 )) / 2
+
+	sommeR :=  0
+
+	for _, nom := range pile {
+		sommeR += nom 
+	}
+	return sommeR - sommeT
+}

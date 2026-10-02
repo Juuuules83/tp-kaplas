@@ -20,8 +20,17 @@ Nous ne pouvons pas la réduire à O(1) dit "constant", car le slice doit parcou
 
 ## PB02 - Le Kapla en double :
 
-A remplir !!!
+Voici le résulta du Banchmark v1 
 
+-> ![alt text](image-3.png)
+
+Voici le résultat du Benchmark V2
+
+-> ![alt text](image-4.png)
+
+Pour la version V1 O(n), on constate que la mémoire utilisée augmente proportionnellement à la valeur de "n", cela passe d'environ 74 264 B/op pour 1000 éléments à plus de 4 729 583 B/op pour 100 000 éléments.
+
+Pour la version V2 O(1) , on constate que la mémoire utilisée reste constante à 0 B/op peu importe que n soit petit ou grand.
 
 --------------------------------------
 
