@@ -71,19 +71,19 @@ cela passe d'environ 230.9 ns/op pour 1000 éléments à plus de 24002 ns/op pou
 
 ## PB04 - Retrouver un Kapla dans une ligne rangée : <br>
 
-### Question : retrouvez-vous l'écart mesuré pendant la capsule ? Sinon, cherchez  pourquoi.<br>
+### Question : si la ligne n'était pas rangée, vaudrait-il la peine de la trier en O(n logn) pour une seule recherche ? Et pour 10 000 recherches ?<br>
 Voici le resultat du Benchamrk V1<br>
--> <br>
+-> ![alt text](image-7.png)<br>
 
-voici le résultat du benchmark V2<br>
--> <br>
 
- - Pour la version V1
+ - la complexité est de O(n), car le programme parcourt la ligne jusqu'à trouver le numéro recherché.<br>
+ le numéro recherché est n+1, donc il n'est pas présent dans la ligne. Le programme doit donc parcourir toute la ligne.<br>
 
-- pour le version V2 
+Pour une seule recherche, ça ne vaut pas le coup de trier la ligne, le tri en O(n log n) coûte plus cher qu'une simple recherche.<br>
+Pour 10 000 recherches, oui ça peut être bien de trier une seule fois pour les recherches suivantes.<br>
+
 
 **Commande pour lancer le bench V1 :** _go test -bench=SearchV1 -benchmem -run='^$'_ <br>
-**Commande pour lancer le bench V2 :** _go test -bench=SearchV2 -benchmem -run='^$'_ <br>
 
 --------------------------------------<br>
 
@@ -93,7 +93,7 @@ voici le résultat du benchmark V2<br>
 Voici le resultat du Benchamrk V1<br>
 -> ![alt text](image-6.png)<br>
 
- - Pour la version V1, la complexité est de O(n). On constate que le temps d'exécution augmente lorsque la valeur de "n" augmente.
+ - La complexité est de O(n). On constate que le temps d'exécution augmente lorsque la valeur de "n" augmente.
 Cela passe d'environ 1 797 ns/op pour 1 000 éléments à 177 984 ns/op pour 100 000 éléments.<br>
 
 La mémoire utilisée augmente avec "n", car le programme crée un nouveau slice de taille "plafond + 1".<br>
