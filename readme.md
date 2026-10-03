@@ -37,11 +37,11 @@ voici le résultat du benchmark V1<br>
 voici le résultat du benchmark V2<br>
 -> ![alt text](image-4.png)<br>
 
- - Pour la version V1, O(n) en temps et O(n) en espace, on constate que la mémoire utilisée augmente proportionnellement à la valeur de "n", <br>
+ - Pour la version V1, O(n) on constate que la mémoire utilisée augmente proportionnellement à la valeur de "n", <br>
 cela passe d'environ 50 142 B/op pour 1000 éléments à plus de 4 632 566 B/op pour 100 000 éléments.<br>
 La V1 fonctionnerait encore avec des numéros quelconques, car elle vérifie simplement si un numéro a déjà été rencontré.<br>
 
- - Pour la version V2, O(n) en temps et O(1) en espace, on constate que la mémoire utilisée reste constante à 0 allocs/op peu importe que "n" soit petit ou grand.<br>
+ - Pour la version V2, O(1) on constate que la mémoire utilisée reste constante à 0 allocs/op peu importe que "n" soit petit ou grand.<br>
  La V2 ne fonctionnerait plus avec des numéros quelconques, car elle utilise la formule de la somme des nombres de 1 à n. <br>
  Elle dépend donc du fait que la pile contienne tous les numéros de 1 à n avec un seul doublon.<br>
 
