@@ -17,7 +17,7 @@ voici le résultat du benchmark V2 <br>
 
 nous sommes à un nombre d'opération de O(n) dans le pire cas<br>
 en raison du fait que c'est un slice que l'on parcours, <br>
-en revanche, la V2 permet de faire en sorte que si min est égal à 1 le programme s'arrête de parcourir le slice car "1" est le plus petit<br>
+en revanche, la V2 permet de faire en sorte que si min est égal à 1 le programme s'arrête de parcourir le slice car "1" est le plus petit nombre possible<br>
 
 Nous ne pouvons pas dans la grande majorité des cas réduire à O(1), car le slice doit parcourir "n" nombre en fonction du nombre d'éléments présent dans le slice.<br>
 En revanche dans le cas où "1" serait le premier nombre du slice cela serait bien O(1)<br>
