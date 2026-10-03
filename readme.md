@@ -56,10 +56,10 @@ Voici le resultat du Benchamrk V1<br>
 voici le résultat du benchmark V2<br>
 -> ![alt text](image-2.png)<br>
 
- - Pour la version V1 O(n), on constate que le temps d'excution augmente  augmente de manière proportionnelle à la valeur de "n", <br>
-cela passe d'environ 254.4 ns/op pour 1000 éléments à plus de 24959 ns/op pour 100 000 éléments  <br>
+ - Pour la version V1 O(n), on constate que le temps d'excution augmente de manière proportionnelle à la valeur de "n", <br>
+cela passe d'environ 230.9 ns/op pour 1000 éléments à plus de 24002 ns/op pour 100 000 éléments  <br>
 
-- pour le version V2 O(1), on constate que le temps d'excution reste constant de 0.5138 ns/op peu importe que n soit petit ou grand   <br>
+- pour le version V2 O(1), on constate que le temps d'excution reste constant d'environ 0.1240 ns/op peu importe que "n" soit petit ou grand <br>
 
 **Commande pour lancer le bench :** _go test -bench=TowerHeightV1 -benchmem -run='^$'_ <br>
 **Commande pour lancer le bench V1 :** _go test -bench=TowerHeightV2 -benchmem -run='^$'_ <br>
