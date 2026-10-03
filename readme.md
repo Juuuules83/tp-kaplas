@@ -64,5 +64,40 @@ cela passe d'environ 230.9 ns/op pour 1000 éléments à plus de 24002 ns/op pou
 
 - pour le version V2 O(1), on constate que le temps d'excution reste constant d'environ 0.1240 ns/op peu importe que "n" soit petit ou grand <br>
 
-**Commande pour lancer le bench :** _go test -bench=TowerHeightV1 -benchmem -run='^$'_ <br>
-**Commande pour lancer le bench V1 :** _go test -bench=TowerHeightV2 -benchmem -run='^$'_ <br>
+**Commande pour lancer le bench V1 :** _go test -bench=TowerHeightV1 -benchmem -run='^$'_ <br>
+**Commande pour lancer le bench V2 :** _go test -bench=TowerHeightV2 -benchmem -run='^$'_ <br>
+
+--------------------------------------<br>
+
+## PB04 - Retrouver un Kapla dans une ligne rangée : <br>
+
+### Question : retrouvez-vous l'écart mesuré pendant la capsule ? Sinon, cherchez  pourquoi.<br>
+Voici le resultat du Benchamrk V1<br>
+-> <br>
+
+voici le résultat du benchmark V2<br>
+-> <br>
+
+ - Pour la version V1
+
+- pour le version V2 
+
+**Commande pour lancer le bench V1 :** _go test -bench=SearchV1 -benchmem -run='^$'_ <br>
+**Commande pour lancer le bench V2 :** _go test -bench=SearchV2 -benchmem -run='^$'_ <br>
+
+--------------------------------------<br>
+
+## PB05 - Compter les Kaplas par numéro : <br>
+
+### Question : si le plafond restait fixé à 10, quelle serait la complexité de votre V1 ? Pourquoi ?<br>
+Voici le resultat du Benchamrk V1<br>
+-> ![alt text](image-6.png)<br>
+
+ - Pour la version V1, la complexité est de O(n). On constate que le temps d'exécution augmente lorsque la valeur de "n" augmente.
+Cela passe d'environ 1 797 ns/op pour 1 000 éléments à 177 984 ns/op pour 100 000 éléments.<br>
+
+La mémoire utilisée augmente également avec "n", car le programme crée un nouveau slice de taille "plafond + 1".<br>
+Si le plafond restait fixé à 10, la complexité resterait O(n), car le programme doit parcourir tous les éléments de la pile. <br>
+En revanche, la mémoire utilisée pour le slice reste constant, car sa taille serait toujours de 11. La complexité deviendrait donc O(1).<br>
+
+**Commande pour lancer le bench V1 :** _go test -bench=CountV1 -benchmem -run='^$'_ <br>
