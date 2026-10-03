@@ -33,9 +33,9 @@ voici le résultat du benchmark V2<br>
 -> ![alt text](image-4.png)<br>
 
  - Pour la version V1 O(n), on constate que la mémoire utilisée augmente proportionnellement à la valeur de "n", <br>
-cela passe d'environ 74 264 B/op pour 1000 éléments à plus de 4 729 583 B/op pour 100 000 éléments.<br>
+cela passe d'environ 50 142 B/op pour 1000 éléments à plus de 4 632 566 B/op pour 100 000 éléments.<br>
 
- - Pour la version V2 O(1) , on constate que la mémoire utilisée reste constante à 0 B/op peu importe que n soit petit ou grand.<br>
+ - Pour la version V2 O(1) , on constate que la mémoire utilisée reste constante à 0 allocs/op peu importe que "n" soit petit ou grand.<br>
 
 **Commande pour lancer le bench V1 :** _go test -bench=DuplicateV1 -benchmem -run='^$'_ <br>
 **Commande pour lancer le bench V2 :** _go test -bench=DuplicateV2 -benchmem -run='^$'_<br>
