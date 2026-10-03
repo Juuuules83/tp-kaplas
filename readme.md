@@ -9,16 +9,21 @@ lien github : https://github.com/Juuuules83/tp-kaplas.git<br>
 
 ### Question : et si la pile était déjà rangée, quelle serait la complexité ?<br>
 
-voici le résultat du benchmark <br>
+voici le résultat du benchmark V1 <br>
 -> ![alt text](image.png)<br>
 
-nous sommes à un nombre d'opération de : O(n)<br>
+voici le résultat du benchmark V2 <br>
+-> ![alt text](image-5.png)<br>
+
+nous sommes à un nombre d'opération de O(n) dans le pire cas<br>
 en raison du fait que c'est un slice que l'on parcours, <br>
-la complexité est de niveau O(n)<br>
+en revanche, la V2 permet de faire en sorte que si min est égal à 1 le programme s'arrête de parcourir le slice car "1" est le plus petit<br>
 
-Nous ne pouvons pas la réduire à O(1) dit "constant", car le slice doit parcourir "n" nombre en fonction du nombre d'éléments présent dans le slice.<br>
+Nous ne pouvons pas dans la grande majorité des cas réduire à O(1), car le slice doit parcourir "n" nombre en fonction du nombre d'éléments présent dans le slice.<br>
+En revanche dans le cas où "1" serait le premier nombre du slice cela serait bien O(1)<br>
 
-**Commande pour lancer le bench :** _go test -bench=SmallestV1 -benchmem -run='^$'_<br>
+**Commande pour lancer le bench V1 :** _go test -bench=SmallestV1 -benchmem -run='^$'_<br>
+**Commande pour lancer le bench V2 :** _go test -bench=SmallestV2 -benchmem -run='^$'_<br>
 
 --------------------------------------<br>
 
