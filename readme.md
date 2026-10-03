@@ -96,8 +96,7 @@ Voici le resultat du Benchamrk V1<br>
  - Pour la version V1, la complexité est de O(n). On constate que le temps d'exécution augmente lorsque la valeur de "n" augmente.
 Cela passe d'environ 1 797 ns/op pour 1 000 éléments à 177 984 ns/op pour 100 000 éléments.<br>
 
-La mémoire utilisée augmente également avec "n", car le programme crée un nouveau slice de taille "plafond + 1".<br>
+La mémoire utilisée augmente avec "n", car le programme crée un nouveau slice de taille "plafond + 1".<br>
 Si le plafond restait fixé à 10, la complexité resterait O(n), car le programme doit parcourir tous les éléments de la pile. <br>
-En revanche, la mémoire utilisée pour le slice reste constant, car sa taille serait toujours de 11. La complexité deviendrait donc O(1).<br>
 
 **Commande pour lancer le bench V1 :** _go test -bench=CountV1 -benchmem -run='^$'_ <br>
