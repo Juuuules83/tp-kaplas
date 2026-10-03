@@ -20,7 +20,7 @@ en raison du fait que c'est un slice que l'on parcours, <br>
 en revanche, la V2 permet de faire en sorte que si min est égal à 1 le programme s'arrête de parcourir le slice car "1" est le plus petit nombre possible<br>
 
 Nous ne pouvons pas dans la grande majorité des cas réduire à O(1), car le slice doit parcourir "n" nombre en fonction du nombre d'éléments présent dans le slice.<br>
-En revanche dans le cas où "1" serait le premier nombre du slice cela serait bien O(1)<br>
+En revanche pour la V2, dans le cas où "1" serait le premier nombre du slice, donc que le slice est déjà ranger ou qu'il commence simplement par 1, cela serait bien O(1)<br>
 
 **Commande pour lancer le bench V1 :** _go test -bench=SmallestV1 -benchmem -run='^$'_<br>
 **Commande pour lancer le bench V2 :** _go test -bench=SmallestV2 -benchmem -run='^$'_<br>
@@ -37,10 +37,13 @@ voici le résultat du benchmark V1<br>
 voici le résultat du benchmark V2<br>
 -> ![alt text](image-4.png)<br>
 
- - Pour la version V1 O(n), on constate que la mémoire utilisée augmente proportionnellement à la valeur de "n", <br>
+ - Pour la version V1, O(n) en temps et O(n) en espace, on constate que la mémoire utilisée augmente proportionnellement à la valeur de "n", <br>
 cela passe d'environ 50 142 B/op pour 1000 éléments à plus de 4 632 566 B/op pour 100 000 éléments.<br>
+La V1 fonctionnerait encore avec des numéros quelconques, car elle vérifie simplement si un numéro a déjà été rencontré.<br>
 
- - Pour la version V2 O(1) , on constate que la mémoire utilisée reste constante à 0 allocs/op peu importe que "n" soit petit ou grand.<br>
+ - Pour la version V2, O(n) en temps et O(1) en espace, on constate que la mémoire utilisée reste constante à 0 allocs/op peu importe que "n" soit petit ou grand.<br>
+ La V2 ne fonctionnerait plus avec des numéros quelconques, car elle utilise la formule de la somme des nombres de 1 à n. <br>
+ Elle dépend donc du fait que la pile contienne tous les numéros de 1 à n avec un seul doublon.<br>
 
 **Commande pour lancer le bench V1 :** _go test -bench=DuplicateV1 -benchmem -run='^$'_ <br>
 **Commande pour lancer le bench V2 :** _go test -bench=DuplicateV2 -benchmem -run='^$'_<br>
