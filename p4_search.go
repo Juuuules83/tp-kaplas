@@ -16,13 +16,14 @@ func SearchV1(ligne []int, v int) int {
 	}
 	return -1
 }
-//droite = taille(ligne) - 1
-//Tant que gauche <= droite :
-    //milieu = (gauche + droite) / 2
-    //Si ligne[milieu] == valeur_cherchée :
-        //retourner milieu
-    //Sinon si ligne[milieu] < valeur_cherchée :
-        //gauche = milieu + 1
-    //Sinon :
-        //droite = milieu - 1
-//retourner -1
+
+/* droite = taille(ligne) - 1
+Tant que gauche <= droite :
+    milieu = (gauche + droite) / 2
+    Si ligne[milieu] == valeur_cherchée :
+        retourner milieu
+    Sinon si ligne[milieu] < valeur_cherchée :
+        gauche = milieu + 1
+    Sinon :
+        droite = milieu - 1
+retourner -1 */
