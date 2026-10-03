@@ -76,3 +76,14 @@ func BenchmarkCountV1(b *testing.B) {
         })
     }
 }
+
+func BenchmarkSearchV1(b *testing.B) {
+	for _, n := range []int{1_000, 10_000, 100_000} {
+		ligne := Sorted(n) 
+		b.Run(fmt.Sprintf("V1/n=%d", n), func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				sink = SearchV1(ligne, n+1) 
+			}
+		})
+	}
+}
